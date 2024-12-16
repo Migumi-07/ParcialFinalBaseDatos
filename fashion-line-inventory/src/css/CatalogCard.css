@@ -1,0 +1,182 @@
+@font-face {
+    font-family: karlaBold;
+    src: url(../fonts/KarlaBold.ttf);
+  }
+  
+  @font-face {
+    font-family: karlaEBold;
+    src: url(../fonts/KarlaExtraBold.ttf);
+  }
+  
+  * {
+    font-family: KarlaBold;
+  }
+  
+  .catalog-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 360px;
+    height: 550px;
+    /* background-color: #d0d0b5; */
+    background-color: #211609;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    position: relative;
+    transition: height 0.3s ease; 
+    z-index: 4;
+  }
+  
+  .catalog-card.expanded {
+    height: 650px; 
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .catalog-image {
+    width: 340px;
+    height: 300px;
+  
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .image-delete-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    visibility: hidden;
+  }
+  
+  .image-delete-button:hover {
+    background-color: #e74c3c;
+  }
+  
+  .image-container:hover .image-delete-button {
+    visibility: visible; 
+  }
+  
+  .catalog-details {
+    margin-top: 12px;
+    text-align: center;
+  }
+  
+  .catalog-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .catalog-description {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+  }
+  
+  .catalog-price {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .catalog-stock {
+    font-size: 0.9em;
+    color: #555;
+  }
+  
+  .catalog-actions {
+    margin-top: 12px;
+    text-align: center;
+  }
+  
+  .delete-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-button:hover {
+    background-color: #c0392b;
+  }
+  
+  .catalog-list {
+    text-align: center;
+  }
+  
+  .catalog-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 40px;
+  }
+  
+  .edit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .edit-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .save-button,
+  .cancel-button {
+    padding: 8px 16px;
+    margin: 4px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .save-button {
+    background-color: #7ba68e;
+    color: white;
+  }
+  
+  .cancel-button {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .edit-button {
+    background-color: #7ba68e;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 12px;
+  }
+  
+  .edit-button:hover {
+    background-color: #788c83;
+  }
+  
+  .cardContainer {
+    display: grid;
+    gap: 20px;
+  }

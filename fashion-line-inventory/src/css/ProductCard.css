@@ -1,0 +1,339 @@
+/*Css ProductCard, también funciona para CatalogCard*/
+
+@font-face {
+  font-family: karlaBold;
+  src: url(../fonts/KarlaBold.ttf);
+}
+
+@font-face {
+  font-family: karlaEBold;
+  src: url(../fonts/KarlaExtraBold.ttf);
+}
+
+* {
+  font-family: KarlaBold;
+}
+
+@font-face {
+  font-family: karlaMedium;
+  src: url(../fonts/Karla-Medium.ttf);
+}
+
+@font-face {
+  font-family: karlaRegular;
+  src: url(../fonts/Karla-Regular.ttf);
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+
+  width: 400px;
+  height: 580px;
+  /* background-color: #d0d0b5; */
+  background-color: #e7e1da;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  position: relative;
+  transition: height 0.3s ease;
+  z-index: 4;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+  cursor: default;
+}
+.product-card.expanded {
+  height: 880px; 
+}
+
+.image-container {
+  position: relative;
+}
+
+.product-image {
+  width: 100%;
+  height: 380px;
+  cursor: default;
+  border-radius: 8px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.product-image:hover {
+  filter: brightness(0.8);
+  transform: scale(1.02);
+}
+
+.image-delete-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.image-delete-button:hover {
+  background-color: #e74c3c;
+}
+
+.image-container:hover .image-delete-button {
+  visibility: visible; 
+}
+
+.product-details {
+  margin-top: 12px;
+  text-align: start;
+  margin-left: 12px;
+}
+
+.product-title {
+  font-size: 20px;
+  margin: 0;
+  text-transform: uppercase;
+}
+.product-description {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: -8px;
+  text-transform: uppercase;
+}
+
+.product-price {
+  font-size: 20px;
+  color: #618a74;
+  margin: 5px 0;
+}
+
+.product-stock {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.product-actions {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.buy-button {
+  background-color: #1e4b37;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.buy-button:hover {
+  background-color: #45a049;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+.product-list {
+  text-align: center;
+}
+
+.product-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  gap: 20px;
+}
+
+.catalog-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 40px;
+}
+
+.formContainer {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+.editFormContainer {
+  width: 500px;
+  height: 640px;
+  background-color: #788c83;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  display: grid;
+}
+
+.formTitle {
+  font-family: karlaEBold;
+  font-size: 20px;
+  line-height: 37px;
+  color: #ffffff;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  width: auto;
+  justify-content: center;
+  justify-items: center;
+
+  align-content: center;
+}
+
+.edit-form input {
+  height: 20px;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #d9d9d9;
+  font-family: karlaMedium;
+  font-size: 16px;
+  width: 340px;
+}
+
+.edit-form input::placeholder {
+  font-family: karlaEBold;
+  font-size: 16px;
+}
+
+.actionButton {
+  padding: 12px;
+  width: 200px;
+  border-radius: 12px;
+  background-color: #6f6856;
+  color: white;
+  text-transform: uppercase;
+  font-family: karlaBold;
+  margin-top: 25px;
+  font-size: 18px;
+}
+
+.actionButton:hover {
+  cursor: pointer;
+  background-color: #a4ac85;
+}
+
+.save-button,
+.cancel-button {
+  padding: 8px 16px;
+  margin: 4px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-button {
+  background-color: #7ba68e;
+  color: white;
+}
+
+.cancel-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.edit-button {
+  background-color: #7ba68e;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 12px;
+  height: 33px;
+  width: 91px;
+}
+
+.edit-button:hover {
+  background-color: #788c83;
+}
+
+.cardContainer {
+  display: grid;
+  gap: 20px;
+}
+
+.uploadImageButton {
+  display: grid;
+  font-family: karlaEBold;
+  font-size: 18px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.description {
+  text-transform: uppercase;
+}
+
+.lowStockButton {
+  margin-top: 20px;
+  box-shadow: inset 0px 0px 14px -3px #f2fadc;
+  background: linear-gradient(to bottom, #dbe6c4 5%, #9ba892 100%);
+  background-color: #dbe6c4;
+  border-radius: 6px;
+  border: 1px solid #b2b8ad;
+  display: inline-block;
+  cursor: pointer;
+  color: #757d6f;
+  font-family: Arial;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ced9bf;
+}
+
+.lowStockButton:hover {
+  transform: scale(1.03);
+  color: rgba(38, 91, 40, 0.79);
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .product-title {
+    font-size: 20px;
+  }
+
+  .product-price {
+    font-size: 18px;
+  }
+}

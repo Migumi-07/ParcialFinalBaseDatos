@@ -1,0 +1,339 @@
+/*css Home, también funciona para inventory y management*/
+
+body {
+  background-color: #efeadd;
+}
+
+@font-face {
+  font-family: karlaBold;
+  src: url(../fonts/KarlaBold.ttf);
+}
+
+@font-face {
+  font-family: karlaEBold;
+  src: url(../fonts/KarlaExtraBold.ttf);
+}
+
+@font-face {
+  font-family: karlaMedium;
+  src: url(../fonts/Karla-Medium.ttf);
+}
+
+@font-face {
+  font-family: karlaRegular;
+  src: url(../fonts/Karla-Regular.ttf);
+}
+
+@font-face {
+  font-family: charmon;
+  src: url(../fonts/Charmonman-Regular.ttf);
+}
+
+@font-face {
+  font-family: charmonB;
+  src: url(../fonts/Charmonman-Bold.ttf);
+}
+
+.mainSection {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  height: 500px;
+  width: 100%;
+  background: url("../img/imgSec1.png") no-repeat center center;
+  background-size: cover;
+  margin-bottom: 74px;
+  filter: drop-shadow(0px 4px 4px #788c83);
+  margin-top: 56px;
+}
+
+.mainSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.mainTitle {
+  font-weight: bold;
+  z-index: 10;
+  color: #6f6856;
+  font-size: 96px;
+  font-family: karlEBold;
+  opacity: 1;
+  margin-bottom: 20px;
+}
+
+.mainTitle:hover {
+  cursor: default;
+}
+
+.mainSlogan {
+  font-family: Charmon;
+  text-align: center;
+  font-weight: bold;
+  z-index: 10;
+  color: #618a74;
+  opacity: 1;
+  font-size: 24px;
+  margin-top: 0; 
+}
+
+.mainSlogan:hover {
+  cursor: default;
+}
+
+.mainSectionItems {
+  display: grid;
+  align-content: center;
+  text-align: center;
+}
+
+.catalog {
+  margin-top: 4px;
+  height: 96px;
+  width: 100%;
+  background-color: #7b7564;
+  text-align: center;
+  align-items: center;
+  display: grid;
+  letter-spacing: 4px;
+  border: 2px solid #4f4b3e;
+}
+
+.catalogSectionTitle {
+  color: #ffffff;
+  font-size: 26px;
+}
+
+.fT1 {
+  text-align: center;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgb(17, 17, 17);
+  z-index: 6;
+  position: relative;
+}
+
+.redRec {
+  margin-top: -70px;
+  position: absolute;
+  width: 100%;
+  height: 420px;
+  background-color: #1a020812;
+  box-shadow: 0px 2px 2px #8daf9b;
+}
+
+.rectBot {
+  margin-top: -302px;
+  position: relative;
+  width: 100%;
+  height: 420px;
+  background-image: url("../img/image4.png");
+  background-size: cover;
+  opacity: 1.1;
+  z-index: 1;
+}
+
+.topModelContainer {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 40px; 
+  padding-bottom: 100px;
+  border: 4px solid #8e8e8d;
+  padding-top: 70px;
+}
+
+.topModel {
+  display: flex;
+  position: relative;
+  width: 48%; 
+  max-width: 724px;
+  height: 873px;
+  margin-top: 30px;
+  background-image: url("../img/imgCat.png");
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 1px 4px 4px #8daf9b;
+  border: 2px solid #a0a0a0;
+}
+
+.topModelTextSpace {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 42px;
+  width: 100%;
+  max-width: 575px;
+  height: auto;
+  background-color: rgba(225, 219, 207, 0.938);
+  color: #333;
+  font-family: karlaMedium;
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 22px;
+  padding: 10px;
+  border: 2px solid #25646d;
+  letter-spacing: 1px;
+}
+
+.topModelDes {
+  font-family: karlaBold;
+  font-size: 20px;
+  color: #25646d;
+}
+.model1 {
+  width: 724px;
+  height: 873px;
+  margin-top: 30px;
+  box-shadow: 1px 1px 4px 4px #8daf9b;
+  border: 2px solid #091c1c6a;
+}
+
+.cataList {
+  box-sizing: border-box;
+  background-color: #71816d;
+  border: 2px solid #091c1c6a;
+  box-shadow: 0px 4px 4px #788c83;
+}
+
+.managementParentcontainer {
+  display: grid;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 26px;
+  background-size: cover;
+  align-items: center;
+  justify-items: center;
+  background-image: url("../img/tin.png");
+}
+
+.managementContainer {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+  justify-items: center;
+  position: relative;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  .mainTitle {
+    font-size: 72px;
+  }
+
+  .mainSlogan {
+    font-size: 20px;
+  }
+
+  .topModel {
+    width: 600px;
+    height: 700px;
+  }
+
+  .topModelTextSpace {
+    width: 500px;
+    font-size: 18px;
+  }
+
+  .managementContainer {
+    gap: 30px;
+    margin-top: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 48px;
+    margin-top: 40px;
+  }
+
+  .mainSlogan {
+    font-size: 22px;
+    margin-top: 10px;
+  }
+
+  .topModel {
+    width: 100%;
+    height: 500px;
+    margin: 20px 0;
+  }
+
+  .topModelTextSpace {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  .managementContainer {
+    flex-direction: column;
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainTitle {
+    font-size: 36px;
+  }
+
+  .mainSlogan {
+    font-size: 18px;
+  }
+
+  .topModel {
+    width: 100%;
+    height: 400px;
+  }
+
+  .topModelTextSpace {
+    font-size: 14px;
+    width: 90%;
+  }
+
+  .managementContainer {
+    gap: 20px;
+  }
+
+  .catalogSectionTitle {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 375px) {
+  .mainTitle {
+    font-size: 32px; 
+  }
+
+  .mainSlogan {
+    font-size: 16px;
+  }
+
+  .topModel {
+    width: 100%;
+    height: 350px; 
+  }
+
+  .topModelTextSpace {
+    font-size: 12px;
+    width: 85%; 
+  }
+
+  .managementContainer {
+    gap: 15px;
+  }
+
+  .catalogSectionTitle {
+    font-size: 16px;
+  }
+}

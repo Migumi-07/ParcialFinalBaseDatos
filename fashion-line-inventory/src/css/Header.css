@@ -1,0 +1,327 @@
+/*css Header*/
+
+@font-face {
+  font-family: karlaBold;
+  src: url(../fonts/KarlaBold.ttf);
+}
+
+@font-face {
+  font-family: karlaEBold;
+  src: url(../fonts/KarlaExtraBold.ttf);
+}
+
+nav {
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 84px;
+  background-color: #788c83;
+  /* background-color: #e9e4de; */
+  font-family: karlaBold;
+  font-size: 24px;
+
+  z-index: 10; 
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit; 
+  filter: blur(2px); 
+  opacity: 0.7;
+  z-index: -1; 
+}
+
+.headerNav {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 84px;
+  background-color: #788c83;
+  /* background-color: #e9e4de; */
+  font-family: karlaBold;
+  font-size: 24px;
+
+  z-index: 10; 
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.headerNav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit; 
+  filter: blur(2px); 
+  opacity: 0.7; 
+  z-index: -1; 
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; 
+  height: 100%; 
+}
+
+.headerLogo {
+  width: 100px;
+  height: 140px;
+  z-index: 4; 
+}
+
+.optionsContainer {
+  display: flex;
+  align-items: center;
+  z-index: 4;
+}
+
+.optionsList {
+  display: flex;
+  gap: 50px;
+}
+
+.optionsItem {
+  list-style: none;
+  color: #ffffff;
+}
+
+.optionsItem a {
+  text-decoration: none;
+  color: #efeadd;
+}
+
+.optionsItem a:hover {
+  text-decoration: none;
+  color: #d0d0b5;
+}
+
+.optionListHome a {
+  color: #d0d0b5;
+  text-decoration: underline;
+}
+
+.optionListManagement a {
+  color: #d0d0b5;
+  text-decoration: underline;
+}
+
+/* management header */
+.managementHeader {
+  background-color: #e0dbce;
+  height: 100px;
+  text-align: center;
+  font-family: karlaEBold;
+  z-index: 0;
+  position: relative;
+}
+
+.managementHeader a {
+  text-decoration: none;
+  color: black;
+}
+
+.managementHeader a:hover {
+  text-decoration: none;
+  color: #25a864b5;
+}
+
+.optionListAddP a {
+  color: #25a864b5;
+}
+
+.optionListProductL a {
+  color: #25a864b5;
+}
+
+/*Boton de search*/
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.search-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  color: white;
+  font-size: 24px;
+}
+
+
+.search-input {
+  display: none; 
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  width: 0;
+  transition: all 0.3s ease;
+  position: absolute;
+  left: 0;
+}
+
+
+.search-container:hover .search-input,
+.search-container:focus-within .search-input {
+  display: block;
+  width: 200px; 
+  transition: width 0.3s ease;
+}
+
+.search-btn:focus + .search-input,
+.search-container:focus-within .search-input {
+  display: block;
+  width: 200px;
+}
+
+
+.search-btn:hover {
+  color: #d0d0b5;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #788c83; 
+}
+
+/* Notificaciones */
+.header-notifications {
+  position: relative;
+  z-index: 99999;
+}
+
+.bell-container {
+  cursor: pointer;
+  position: relative;
+}
+
+.notification-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ff6347; 
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.notifications-dropdown {
+  position: absolute;
+  top: 50px; 
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 99999;
+  padding: 10px;
+}
+
+.notifications-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #ddd; 
+  z-index: 10;
+}
+
+.notification-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 14px;
+  color: #555;
+  position: relative;
+  transition: background-color 0.3s ease;
+  max-width: 100%; 
+}
+
+.notification-item:hover {
+  background-color: #f9f9f9;
+}
+
+.notification-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-right: 12px;
+  border-radius: 5px; 
+}
+
+.notification-item a {
+  max-width: calc(
+    100% - 50px - 30px
+  );
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+/* Botón de eliminar notificación */
+.delete-notification-btn {
+  background: none;
+  border: none;
+  color: #788c83 !important;
+  font-size: 22px;
+
+  cursor: pointer;
+  position: absolute;
+  right: 1px; 
+  top: 12px;
+}
+
+.delete-notification-btn:hover {
+  color: #788c83;
+}
+
+/* Estilo para eliminar todas las notificaciones */
+.delete-all-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.delete-all-btn:hover {
+  background-color: #c0392b;
+}
+
+.notification-bell {
+  color: white;
+  font-size: 1.5rem;
+}
